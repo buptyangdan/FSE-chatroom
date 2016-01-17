@@ -3,8 +3,6 @@
 */
 
 var express = require('express')
-, routes = require('./routes')
-, user = require('./routes/user')
 , http = require('http')
 , path = require('path');
 
@@ -12,7 +10,7 @@ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + 'views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -20,7 +18,7 @@ app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // development only
 if ('development' == app.get('env')) {
@@ -59,7 +57,7 @@ app.get('/api/talk', function (req, res) {
     var touser = req.query.touser;
     console.log(fromuser);
     console.log(touser);
-    var dbh = require('./dbhandler')();
+    var dbh = require('../model/dbhandler')();
     dbh.get_talk(fromuser, touser,function (err, talks) {
         if (err)
             res.json([])
@@ -72,7 +70,7 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
   //someone online
-  var dbh = require('./dbhandler')();
+  var dbh = require('../model/dbhandler')();
   socket.on('online', function (data) {
     //save online username into socket 
     socket.name = data.user;
