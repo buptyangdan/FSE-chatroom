@@ -1,0 +1,63 @@
+body {
+  background-color: #DADADA;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body > .grid {
+    height: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#users-list {
+    width: 400px;
+    margin: auto;
+}
+
+#chats {
+    width: 400px;
+    margin: auto;
+}
+
+#users {
+    width: 400px;
+    margin: auto;
+}
+
+form {
+    width: 400px;
+    margin: auto;
+}
+
+#index{
+    width: 400px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+}
+#noti_Container {
+    position:relative;
+    width:30px;
+    height:20px;
+}
+
+#note {
+    position:absolute;
+    top: -6px;
+    right:-6px;
+    padding:1px 2px 1px 2px;
+    background-color:red;
+    color:black;
+    font-weight:bold;
+    font-size:0.55em;
+
+    border-radius:30px;
+    box-shadow:1px 1px 1px black;
+}
+
+#statusForm {
+  margin-top: 20vh;
+}

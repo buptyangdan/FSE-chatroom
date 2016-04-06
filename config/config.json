@@ -1,0 +1,10 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./ssnoc.dev.db"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "./ssnoc.test.db"
+  }
+}

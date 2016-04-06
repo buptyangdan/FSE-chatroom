@@ -1,0 +1,39 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    America/Los_Angeles # Set the timezone
+
+  # Version of Nodejs to use
+  node:
+    version: 4.1.0
+
+  # Override /etc/hosts
+  hosts:
+    circlehost: 127.0.0.1
+
+  # Add some environment variables
+  environment:
+    CIRCLE_ENV: test
+
+## Customize checkout
+checkout:
+  post:
+    - git config user.email "xljroy@gmail.commands"
+    - git config user.name "Roy Xue"
+    - git rebase origin/master
+
+## Customize dependencies
+dependencies:
+  override:
+    - npm install -g grunt-cli mocha istanbul
+    - npm install sqlite3 --save
+    - npm install
+
+## Customize test commands
+test:
+  override:
+    - mkdir -p $CIRCLE_TEST_REPORTS/mocha
+    - node initdb.js
+    - ./node_modules/.bin/sequelize db:seed:all
+    - grunt circleci
