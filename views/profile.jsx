@@ -93,8 +93,8 @@ var ProfilePage = React.createClass({
 		<select className="form-control" id="status" disabled={this.props.readonly}>
 		<option value="3" selected={selected3}>Please select one status</option>
 		<option value="0" selected={selected0}>I am OK now.</option>
-		<option value="1" selected={selected1}>Emergency</option>
-		<option value="2" selected={selected2}>Help Me!</option>
+		<option value="1" selected={selected1}>Help Me!</option>
+		<option value="2" selected={selected2}>Emergency</option>
 		</select>
 		</div>
 		</div>
