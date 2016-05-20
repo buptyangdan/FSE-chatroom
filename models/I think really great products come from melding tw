@@ -1,0 +1,16 @@
+I think really great products come from melding two points of view the technology point of view and the customer point of view
+
+1.performance :
+using sqlite3, compress data?  10 Average Throughput (Requests/Sec.)1000M
+
+2.usability:
+navibar displays all the functions and easy understood.
+Using picture and numbers to visualize unread notification
+
+3,reliability
+long-time tolerance
+
+4. maintainablity
+
+We compress our database handler into models so that 
+We use React to build our view. userlist and postlist are all components that can be accessed repeatedly. 

@@ -1,0 +1,99 @@
+1. edit others and notification 
+2. if he is the last administrator  and edit self will be alerted and receive 
+3. username password account previledge
+1.if the first two modified and the user has to logout
+and login using the new one 
+2. account whether active if 
+3. previledge modified will be noti, the current page will be newed
+
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/header_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/sv_campus"
+            />
+
+        <LinearLayout
+            android:id="@+id/informations_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/header_imageview"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/header_name"
+                android:textStyle="bold"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:textColor="#FF707070"
+                android:text="email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#FF909090" />
+
+        </LinearLayout>
+
+    <!-- cheat code: negative margin -->
+
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/informations_container"
+            android:layout_marginBottom="-20dp" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:id="@+id/scrollView"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_above="@+id/facebook_login"-->
+        <!--android:layout_below="@+id/informations_container"-->
+        <!--android:fillViewport="false">-->
+
+        <ListView
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:id="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/informations_container"
+            android:choiceMode="multipleChoice" />
+    <!--</ScrollView>-->
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebook_login"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+
+
+
